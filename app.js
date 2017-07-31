@@ -49,7 +49,11 @@ app.use('/users', users);
 // index route
 app.get('/', (req, res) => {
   res.send("Invalid Endpoint");
-})
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 
 // Start listening at specified port
 app.listen(port, () => {
