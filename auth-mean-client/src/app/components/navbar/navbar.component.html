@@ -14,16 +14,19 @@
             <li [routerLinkActive]="['active']"
                 [routerLinkActiveOptions]="{exact:true}">
               <a [routerLink]="['/']">Home</a></li>
+            <li [routerLinkActive]="['active']">
+              <a [routerLink]="['/profile']">Profile</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            <li [routerLinkActive]="['active']">
+              <a [routerLink]="['/dashboard']">Dashboard</a></li>
             <li [routerLinkActive]="['active']">
               <a [routerLink]="['/login']">Login</a></li>
             <li [routerLinkActive]="['active']">
               <a [routerLink]="['/register']">Register</a></li>
             <li>
-              <a href="#"
-                 (click)="logout()">Logout</a></li>
+              <a href="#" (click)="logout()">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
