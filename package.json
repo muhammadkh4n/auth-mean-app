@@ -1,7 +1,7 @@
 {
-  "name": "social-mean-app",
+  "name": "auth-mean-app",
   "version": "1.0.0",
-  "description": "MEAN Stack App for some social media functionality",
+  "description": "MEAN Stack App for some auth functionality",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
