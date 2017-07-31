@@ -1,0 +1,22 @@
+{
+  "name": "social-mean-app",
+  "version": "1.0.0",
+  "description": "MEAN Stack App for some social media functionality",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "Muhammad Khan <muhammadkh4n@gmail.com>",
+  "license": "ISC"
+}
