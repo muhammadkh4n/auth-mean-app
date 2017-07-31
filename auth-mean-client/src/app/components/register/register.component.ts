@@ -59,13 +59,13 @@ export class RegisterComponent implements OnInit {
             cssClass: 'alert-success',
             timeout: 3000
           });
-          this.router.navigate(['/login']);
+          this.router.navigate(['login']);
         } else {
           this.flashMessage.show('Something went wrong', {
             cssClass: 'alert-danger',
             timeout: 3000
           });
-          this.router.navigate(['/register']);
+          this.router.navigate(['register']);
         }
       });
   }
