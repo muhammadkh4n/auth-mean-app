@@ -1,14 +1,28 @@
 const bodyParser = require('body-parser');
-const config = require('./config/database');
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 const passport = require('passport');
 
-mongoose.connect(config.database);
-
+// Local modules
+const config = require('./config/database');
 const users = require('./routes/users');
+
+// Connect database mongodb
+mongoose.connect(config.database, {
+  useMongoClient: true
+});
+
+// Get db connnection success status
+mongoose.connection.on('connected', () => {
+    console.log("Connected to database "+config.database);
+});
+
+// Get db connnection error status
+mongoose.connection.on('error', (err) => {
+    console.log("error connecting to database "+err, config.database);
+});
 
 const app = express(); // Initialize express
 
