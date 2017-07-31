@@ -16,12 +16,12 @@ mongoose.connect(config.database, {
 
 // Get db connnection success status
 mongoose.connection.on('connected', () => {
-    console.log("Connected to database "+config.database);
+  console.log("Connected to database " + config.database);
 });
 
 // Get db connnection error status
 mongoose.connection.on('error', (err) => {
-    console.log("error connecting to database "+err, config.database);
+  console.log("error connecting to database " + err, config.database);
 });
 
 const app = express(); // Initialize express
@@ -42,10 +42,10 @@ app.use('/users', users);
 
 // index route
 app.get('/', (req, res) => {
-    res.send("Invalid Endpoint");
+  res.send("Invalid Endpoint");
 })
 
 // Start listening at specified port
 app.listen(port, () => {
-    console.log("server started on port "+port);
+  console.log("server started on port " + port);
 });
